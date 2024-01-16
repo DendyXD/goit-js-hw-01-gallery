@@ -21,7 +21,11 @@ galleryItems.forEach((item) => {
 
 gallery.addEventListener("click", imageChooser);
 closeButton.addEventListener("click", closeModal);
-lighboxOverlay.addEventListener("click", closeModal)
+lighboxOverlay.addEventListener("click", (e) => {
+    if (e.target === lighboxOverlay) {
+        closeModal()
+    }
+})
 document.addEventListener("keydown", (e) => {
     if (e.code === "Escape") {
         closeModal()
