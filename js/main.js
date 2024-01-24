@@ -34,6 +34,7 @@ document.addEventListener("keydown", (e) => {
 
 function imageChooser(e) {
     if (e.target !== gallery) {
+        e.preventDefault()
         let clickedImg = e.target;
         modalImg.src = clickedImg.src;
         modalImg.alt = clickedImg.alt;
